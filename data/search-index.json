@@ -32,8 +32,6 @@
             "https://cdn.mobygames.com/screenshots/11093158-minecraft-android-exploring-a-cave.jpg"
         ]
     }
-    
-    // ... (El resto de tus juegos/apps) ...
-    // (Asegúrate de que incluso si no tienen capturas, tengan al menos: "screenshots": [])
 ]
+
 
