@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cargando...</title>
+
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body data-page="">
+    <div id="header-placeholder"></div>
+
+    <main>
+      <div class="game-detail-container">
+        <img
+          id="game-image"
+          src="https://via.placeholder.com/300?text=Cargando..."
+          alt="Portada del juego"
+          class="game-detail-image"
+        />
+
+        <div class="game-detail-info">
+          <h1 id="game-title">Cargando...</h1>
+          <span id="game-date" class="game-detail-date"></span>
+
+          <div class="game-detail-meta">
+            <div class="meta-item">
+              <span>Versión</span>
+              <strong id="game-version">...</strong>
+            </div>
+            <div class="meta-item">
+              <span>Categoría</span>
+              <strong id="game-category">...</strong>
+            </div>
+          </div>
+
+          <a href="#" id="game-download-link" class="form-button">Descargar</a>
+
+          <h2>Descripción</h2>
+          <p id="game-description">...</p>
+        </div>
+      </div>
+
+      <div class="gallery-container">
+        <h2>Capturas de Pantalla</h2>
+        <div class="screenshots-gallery" id="screenshots-gallery"></div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/juego.js"></script>
+  </body>
+</html>

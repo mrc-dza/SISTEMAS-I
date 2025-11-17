@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popular - GameHub</title>
+
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body data-page="popular">
+    <div id="header-placeholder"></div>
+
+    <main>
+      <h1><i class="fa-solid fa-fire"></i> Lo Más Popular</h1>
+      <p style="margin-bottom: 2rem">
+        Los juegos y apps que son tendencia ahora mismo.
+      </p>
+
+      <div class="grid-container" id="popular-grid"></div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/dynamic-content.js"></script>
+  </body>
+</html>
