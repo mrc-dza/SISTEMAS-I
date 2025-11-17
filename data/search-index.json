@@ -1,37 +1,5 @@
 [
-    {
-        "id": "gta-san-andreas",
-        "title": "GTA San Andreas",
-        "image": "https://upload.wikimedia.org/wikipedia/en/c/c5/GTASABOX.jpg",
-        "date": "Julio 20, 2025",
-        "page": "juegos.html",
-        "description": "El clásico juego de mundo abierto. Vuelve a Los Santos y vive la historia de Carl Johnson en su regreso al barrio.",
-        "category": "accion",
-        "version": "2.11.277",
-        "tags": [ "popular", "recent" ],
-        "screenshots": [
-            "https://media.rockstargames.com/sanandreas/images/mobile_images/screen01.jpg",
-            "https://media.rockstargames.com/sanandreas/images/mobile_images/screen03.jpg",
-            "https://media.rockstargames.com/sanandreas/images/mobile_images/screen04.jpg",
-            "https://media.rockstargames.com/sanandreas/images/mobile_images/screen05.jpg"
-        ]
-    },
-    {
-        "id": "minecraft",
-        "title": "Minecraft",
-        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Minecraft_cover.png/1024px-Minecraft_cover.png",
-        "date": "Agosto 10, 2025",
-        "page": "juegos.html",
-        "description": "Un mundo abierto de bloques. Construye, explora y sobrevive.",
-        "category": "aventura",
-        "version": "1.20.1",
-        "tags": [ "popular", "recent" ],
-        "screenshots": [
-            "https://cdn.mobygames.com/screenshots/11093154-minecraft-android-crafting.jpg",
-            "https://cdn.mobygames.com/screenshots/11093157-minecraft-android-a-view-of-a-plains-village.jpg",
-            "https://cdn.mobygames.com/screenshots/11093158-minecraft-android-exploring-a-cave.jpg"
-        ]
-    }
 ]
+
 
 
