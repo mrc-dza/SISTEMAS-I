@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - GameHub</title>
+
+    <script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  })();
+</script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body data-page="contacto">
+    <div id="header-placeholder"></div>
+
+    <main>
+      <h1><i class="fa-solid fa-envelope"></i> Ponte en Contacto</h1>
+      <p
+        style="
+          margin-bottom: 2rem;
+          text-align: center;
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        "
+      >
+        ¿Tienes alguna pregunta, sugerencia o simplemente quieres saludar? Nos
+        encantaría saber de ti.
+      </p>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Información de Contacto</h3>
+          <p>
+            Puedes contactarnos a través de estos canales. Intentaremos
+            responder lo antes posible.
+          </p>
+
+          <div class="info-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contacto@gamehub.com</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+1 (555) 123-4567</span>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-map-marker-alt"></i>
+            <span>Ciudad Ficticia, País</span>
+          </div>
+
+          <div class="social-links-contact">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form action="https" method="POST" class="contact-form">
+            <h3>Enviar un Mensaje</h3>
+
+            <div class="input-group">
+              <i class="fa-solid fa-user"></i>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Tu Nombre"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <i class="fa-solid fa-at"></i>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Tu Email"
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <i class="fa-solid fa-pencil"></i>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tu Mensaje..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form-button">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

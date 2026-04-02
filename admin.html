@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - GameHub</title>
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body data-page="">
+    <script>
+      const password = "tucontraseña123";
+      if (prompt("Introduce la contraseña de administrador:") !== password) {
+        document.body.innerHTML =
+          '<h1 style="text-align: center; margin-top: 50px;">Acceso Denegado</h1>';
+        throw new Error("Contraseña incorrecta");
+      }
+    </script>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+      <h1><i class="fa-solid fa-cogs"></i> Panel de Administración</h1>
+      <p>Rellena este formulario para generar el código JSON.</p>
+
+      <form id="admin-form" class="admin-form">
+        <div class="form-group">
+          <label for="admin-title">Título</label>
+          <input type="text" id="admin-title" required />
+        </div>
+        <div class="form-group">
+          <label for="admin-id">ID Único (ej: gta-san-andreas)</label>
+          <input type="text" id="admin-id" required />
+        </div>
+        <div class="form-group">
+          <label for="admin-image">URL de la Imagen (Portada)</label>
+          <input type="text" id="admin-image" required />
+        </div>
+
+        <div class="form-group">
+          <label for="admin-version">Versión (ej: 1.20.1)</label>
+          <input type="text" id="admin-version" required />
+        </div>
+
+        <div class="form-group">
+          <label for="admin-date">Fecha</label>
+          <input type="text" id="admin-date" required />
+        </div>
+        <div class="form-group">
+          <label for="admin-page">Tipo</label>
+          <select id="admin-page">
+            <option value="juegos.html">Juego</option>
+            <option value="apps.html">App</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="admin-category"
+            >Categoría (para filtros, ej: accion, puzzle)</label
+          >
+          <input type="text" id="admin-category" required />
+        </div>
+        <div class="form-group">
+          <label for="admin-description">Descripción</label>
+          <textarea id="admin-description" rows="5" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="admin-screenshots"
+            >Capturas de Pantalla (Una URL por línea)</label
+          >
+          <textarea id="admin-screenshots" rows="5"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Etiquetas (Tags)</label>
+          <div class="admin-checkboxes">
+            <input type="checkbox" id="tag-popular" value="popular" />
+            <label for="tag-popular">Popular</label>
+            <input type="checkbox" id="tag-recent" value="recent" />
+            <label for="tag-recent">Reciente</label>
+          </div>
+        </div>
+        <button type="submit" class="form-button">Generar Código JSON</button>
+      </form>
+
+      <hr style="margin: 2rem 0" />
+
+      <h2><i class="fa-solid fa-code"></i> Código JSON Generado</h2>
+      <p>
+        Copia este código y pégalo en tu archivo
+        <code>data/search-index.json</code>
+      </p>
+      <textarea id="output-json" class="admin-output" readonly></textarea>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juegos - GameHub</title>
+
+    <script>
+      (function () {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body data-page="juegos">
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="hero">
+        <h1>Todos los Juegos</h1>
+        <p>Encuentra todos los juegos disponibles.</p>
+      </section>
+
+      <h2><i class="fa-solid fa-gamepad"></i> Todos los Juegos</h2>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="accion">Acción</button>
+        <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+        <button class="filter-btn" data-filter="carreras">Carreras</button>
+        <button class="filter-btn" data-filter="deporte">Deporte</button>
+        <button class="filter-btn" data-filter="aventura">Aventura</button>
+        <button class="filter-btn" data-filter="rpg">RPG</button>
+        <button class="filter-btn" data-filter="estrategia">Estrategia</button>
+      </div>
+
+      <div class="grid-container" id="juegos-grid"></div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/dynamic-content.js"></script>
+  </body>
+</html>
